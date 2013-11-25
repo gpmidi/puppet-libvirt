@@ -9,12 +9,14 @@ class libvirt::params {
       $libvirt_package = "libvirt.${::architecture}"
       $libvirt_service = 'libvirtd'
       $virtinst_package = 'python-virtinst'
+      $radvd_package = 'radvd'
       $sysconfig = {}
     }
     'Debian': {
       $libvirt_package = 'libvirt-bin'
       $libvirt_service = 'libvirt-bin'
       $virtinst_package = 'virtinst'
+      $radvd_package = 'radvd'
       $sysconfig = false
       # UNIX socket
       $unix_sock_group = 'libvirtd'
@@ -26,6 +28,7 @@ class libvirt::params {
       $libvirt_package = 'libvirt'
       $libvirt_service = 'libvirtd'
       $virtinst_package = 'python-virtinst'
+      $radvd_package = 'radvd'
       $sysconfig = false
     }
   }
